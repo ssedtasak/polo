@@ -1,0 +1,14 @@
+#Credit: TEERACHAI RATTANABUNDITSAKUL
+#Import library ที่เราจะต้องใช้งาน
+import ccxt
+import json
+
+# ใช้ json ในการดึงข้อมูลราคา PRODUCT ที่เราสนใจจะเทรด
+Pair = 'XRP/USDT'  #ใส่คู่เงิน
+r = json.dumps(exchange.fetch_ticker(Pair))
+dataPrice = json.loads(r)
+
+
+# ทดลอง PRINT ข้อมูลที่ได้ออกมาดูว่าตรงหรือเปล่า
+print(exchange)
+print(Pair, ' = ', dataPrice['last'])
